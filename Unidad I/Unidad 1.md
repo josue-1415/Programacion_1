@@ -1,5 +1,15 @@
 # Unidad 1
 
+Comentario en una linea: `// este es un comentario en una linea`
+
+Comentario en varias lineas: 
+```
+/* Comentario en varias lineas: 
+
+Un párrafo como comentario */
+
+```
+
 Estructura de un programa en c++.
 ```c++
 // Librerías
@@ -52,12 +62,63 @@ denominado ***función***.
 > 7. El compilador no ignora los caracteres de
 espacio en blanco en las cadenas.
 
-La linea de comando `
-std::cout<<"Bienvenido a cC++!\n";`, incluyendo std::cout, el operador <<, la cadena "Bienvenido a C++!\n" y el punto
-y coma (;), se le conoce como instrucción. Cada instrucción en C++ debe terminar con un punto y coma (también
-conocido como terminador de instrucciones). Las directivas del preprocesador (como #include) no terminan con un
-punto y coma. En C++, las operaciones de entrada y salida se realizan mediante f lujos de caracteres
+La linea de comando `std::cout<<"Bienvenido a cC++!\n";` se le conoce como instrucción.
+
+Cada instrucción en C++ debe terminar con un punto y coma (también conocido como terminador de instrucciones).
+
+Las directivas del preprocesador (como `#include`) no terminan con un punto y coma. 
+
+En C++, las operaciones de entrada y salida se realizan mediante flujos de caracteres.
+
+Se coloca `std::` antes de `cout`. Esto se requiere cuando utilizamos nombres que hemos traído al programa por la directiva del preprocesador `#include <iostream>`. 
+
+La notación `std::cout` especifica que estamos
+usando un nombre (en este caso `cout`) que pertenece al “espacio de nombres” `std`. Los nombres `cin` (el flujo de entrada
+estándar) y `cerr` (el flujo de error estándar), también pertenecen al espacio de nombres
+std. 
+
+El operador `<<` se conoce como el operador de inserción de flujo. Cuando este programa se ejecuta, el valor a la derecha del operador (el operando derecho) se inserta en el flujo de salida. Observe que el operador apunta en la
+dirección hacia la que van los datos.
+
+Por lo general, los caracteres del operando derecho se imprimen exactamente como
+aparecen entre las comillas dobles. Sin embargo, los caracteres `\n` no se imprimen en la pantalla. A la barra diagonal inversa (`\`) se le llama *carácter de escape*. Este carácter indica que se va a imprimir en pantalla un carácter *"especial"*. 
+
+La secuencia de escape `\n` representa una nueva línea.
+Hace que el cursor (es decir, el indicador de la posición actual en la pantalla) se desplace al principio de la siguiente línea
+en la pantalla.
+
+|Secuencia de escape  `std::cout<<" ":;`|Descripción    |
+|:------------------- |:------------- |
+|`\n`                 |Salto de línea     |
+|`\t`                 |Tabulación         |
+|`\r`                |Retorno de carro. Coloca el cursor de la pantalla al inicio de la línea actual; no avanza a la siguiente línea.    |
+|`\a`                |Alarma. Sonido de alarma. |
+|`\\`               |Barra diagonal inversa. Se usa para imprimir un carácter de barra diagonal inversa|
+|`\'`                |Comilla simple. Se usa para imprimir un carácter de comilla simple.|
+|`\"`                |Comilla doble. Se usa para imprimir un carácter de comilla doble.|
+|`\?`                |Pregunta. Se usa para imprimir un carácter de pregunta.|
+
+
+------------------------------------------------
+`return 0;`:indica que el programa terminó con éxito es uno de varios medios que utilizaremos para salir de una función. 
+
+Cuando se utiliza la instrucción `return` al final de `main`, como se muestra aquí, el valor 0 indica que el programa ha terminado correctamente.
 
 ------------------------------------------------
 
 ## Palabras clave de C++ (palabras reservadas)
+
+`#include`: *directiva de preprocesador* que incluye una libreria en el programa.
+
+`std::cout`: *nombre de flujo de salida* que se usa para imprimir en pantalla.
+
+`std::cin`: *nombre de flujo de entrada* que se usa para leer de la pantalla.
+
+`std::endl`: *nombre de flujo de salida* que se usa para imprimir un salto de línea.
+
+`<<` se conoce como *operador de inserción de flujo*.
+
+`>>` se conoce como *operador de extracción de flujo*.
+
+`return 0`: *palabra reservada* que indica que el programa terminó correctamente.
+
